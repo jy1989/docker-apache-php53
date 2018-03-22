@@ -1,5 +1,5 @@
 FROM ubuntu:12.04
-MAINTAINER Alexander Schenkel <alex@alexi.ch>
+MAINTAINER JY
 
 VOLUME ["/var/www"]
 
@@ -12,7 +12,9 @@ RUN apt-get update && \
       php5-gd \
       php5-ldap \
       php5-mysql \
-      php5-pgsql
+      php5-curl \
+      cron \
+      vim
 
 COPY apache_default /etc/apache2/sites-available/default
 COPY run /usr/local/bin/run
