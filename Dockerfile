@@ -4,17 +4,16 @@ MAINTAINER JY
 VOLUME ["/var/www"]
 
 RUN apt-get update && \
-    apt-get install -y \
-      apache2 \
-      php5 \
-      php5-cli \
-      libapache2-mod-php5 \
-      php5-gd \
-      php5-ldap \
-      php5-mysql \
-      php5-curl \
-      cron \
-      vim
+  apt-get install -y \
+  apache2 \
+  php5.6 \
+  php5.6-cli \
+  libapache2-mod-php5.6 \
+  php5.6-gd \
+  php5.6-ldap \
+  php5.6-mysql \
+  php5.6-curl \
+  vim
 
 COPY apache_default /etc/apache2/sites-available/default
 COPY run /usr/local/bin/run
