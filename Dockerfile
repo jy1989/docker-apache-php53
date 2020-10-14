@@ -1,4 +1,4 @@
-FROM ubuntu:12.04
+FROM ubuntu:16.04
 MAINTAINER JY
 
 VOLUME ["/var/www"]
