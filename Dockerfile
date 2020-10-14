@@ -1,10 +1,9 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER JY
 
 VOLUME ["/var/www"]
-RUN apt-get update
-RUN apt-get -y install software-properties-common
-RUN apt-add-repository -y ppa:ondrej/php
+RUN apt-get install -y python-software-properties
+RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 
 RUN apt-get install -y \
